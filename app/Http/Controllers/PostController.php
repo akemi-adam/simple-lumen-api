@@ -10,7 +10,7 @@ use App\Models\Post;
 class PostController extends Controller
 {
     /**
-     * Rerota uma lista em JSON com todas as publicações
+     * Retorna uma lista em JSON com todas as publicações
      */
     public function index() : JsonResponse
     {
@@ -31,7 +31,7 @@ class PostController extends Controller
             'content' => 'required|string'
         ]);
 
-        return response()->json(Post::Create($request->all()), 201);
+        return response()->json(Post::create($request->all()), 201);
     }
 
     /**
